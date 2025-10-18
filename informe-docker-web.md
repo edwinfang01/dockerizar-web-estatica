@@ -82,8 +82,8 @@ git config --global user.email "tu.email@ejemplo.com"
 [Captura de pantalla del repositorio: https://github.com/edwinfang01/dockerizar-web-estatica]
 [Captura de la pantalla después de clonar mostrando los archivos]
 ```
-![Evidencia](evidencias/Pasted image 20251018144543.png)
-![Evidencia](evidencias/Pasted image 20251018144620.png)
+![Evidencia](evidencias/Pasted%20image%2020251018144543.png)
+![Evidencia](evidencias/Pasted%20image%2020251018144620.png)
 ### Paso 1.2: Crear el archivo Dockerfile
 
 Creé un archivo llamado `Dockerfile` con el siguiente contenido:
@@ -113,7 +113,7 @@ CMD ["nginx", "-g", "daemon off;"]
 ```
 [Captura de pantalla del Dockerfile en el editor]
 ```
-![Evidencia](evidencias/Pasted image 20251018145957.png)
+![Evidencia](evidencias/Pasted%20image%2020251018145957.png)
 
 ### Explicación del Dockerfile
 
@@ -150,7 +150,7 @@ Step 5/5 : CMD ["nginx", "-g", "daemon off;"]
 Successfully built [IMAGE_ID]
 Successfully tagged nginx-2048:1.0
 ```
-![Evidencia](evidencias/Pasted image 20251018150419.png)
+![Evidencia](evidencias/Pasted%20image%2020251018150419.png)
 
 ### Paso 2.2: Verificar la imagen creada
 
@@ -163,7 +163,7 @@ docker images
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 nginx-2048    1.0       [ID]           X minutes ago   XXX MB
 ```
-![Evidencia](evidencias/Pasted image 20251018150509.png)
+![Evidencia](evidencias/Pasted%20image%2020251018150509.png)
 
 ### Paso 2.2: Probar la imagen localmente
 
@@ -177,7 +177,7 @@ Accedí a `http://localhost:8080` para verificar que funciona correctamente.
 ```
 [Captura de pantalla del juego 2048 funcionando en http://localhost:8080]
 ```
-![Evidencia](evidencias/Pasted image 20251018150540.png)
+![Evidencia](evidencias/Pasted%20image%2020251018150540.png)
 
 ### Paso 2.4: Etiquetar la imagen con el usuario de Docker Hub
 
@@ -195,7 +195,7 @@ nginx-2048                1.0       a1b2c3d4       X minutes ago   145MB
 idkman068/nginx-2048      1.0       a1b2c3d4       X minutes ago   145MB
 idkman068/nginx-2048      latest    a1b2c3d4       X minutes ago   145MB
 ```
-![Evidencia](evidencias/Pasted image 20251018153759.png)
+![Evidencia](evidencias/Pasted%20image%2020251018153759.png)
 
 ---
 
@@ -213,7 +213,7 @@ Username: [MI_USUARIO]
 Password: [TOKEN o contraseña]
 Login Succeeded
 ```
-![Evidencia](evidencias/Pasted image 20251018153821.png)
+![Evidencia](evidencias/Pasted%20image%2020251018153821.png)
 
 ### Paso 3.2: Publicar las imágenes
 
@@ -229,7 +229,7 @@ The push refers to repository [docker.io/idkman068/nginx-2048]
 1.0: digest: sha256:... size: ...
 latest: digest: sha256:... size: ...
 ```
-![Evidencia](evidencias/Pasted image 20251018153953.png)
+![Evidencia](evidencias/Pasted%20image%2020251018153953.png)
 
 ### Paso 3.3: Verificar en Docker Hub
 
@@ -265,9 +265,9 @@ Accedí a la consola de AWS y creé una instancia EC2 con la siguiente configura
 Instance ID: i-xxxxxxxxxxxxxxxx
 Public IPv4: 54.163.19.229 ✅
 ```
-![Evidencia](evidencias/Pasted image 20251018155523.png)
-![Evidencia](evidencias/Pasted image 20251018155703.png)
-![Evidencia](evidencias/Pasted image 20251018155718.png)
+![Evidencia](evidencias/Pasted%20image%2020251018155523.png)
+![Evidencia](evidencias/Pasted%20image%2020251018155703.png)
+![Evidencia](evidencias/Pasted%20image%2020251018155718.png)
 
 ### Paso 4.2: Conectar a la instancia EC2
 
@@ -279,7 +279,7 @@ ssh -i "mi-clave-ec2.pem" ubuntu@54.163.19.229
 ```
 [Captura de pantalla de la conexión SSH exitosa]
 ```
-![Evidencia](evidencias/Pasted image 20251018160057.png)
+![Evidencia](evidencias/Pasted%20image%2020251018160057.png)
 
 ### Paso 4.3: Instalar Docker en EC2
 
@@ -315,7 +315,7 @@ sudo docker --version
 ```
 Docker version XX.XX.X, build XXXXXXX
 ```
-![Evidencia](evidencias/Pasted image 20251018160230.png)
+![Evidencia](evidencias/Pasted%20image%2020251018160230.png)
 ### Paso 4.4: Configurar permisos de Docker
 
 ```bash
@@ -334,7 +334,7 @@ docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 (lista vacía - normal en este punto)
 ```
-![Evidencia](evidencias/Pasted image 20251018161822.png)
+![Evidencia](evidencias/Pasted%20image%2020251018161822.png)
 
 ---
 
@@ -368,7 +368,7 @@ services:
 ```
 [Captura de pantalla del archivo docker-compose.yml en el servidor]
 ```
-![Evidencia](evidencias/Pasted image 20251018162529.png)
+![Evidencia](evidencias/Pasted%20image%2020251018162529.png)
 ### Paso 5.2: Levantar los servicios
 
 ```bash
@@ -381,7 +381,7 @@ docker compose up -d
  ⠿ Network web-estatica_default  Created
  ⠿ Container web-2048            Started
 ```
-![Evidencia](evidencias/Pasted image 20251018163907.png)
+![Evidencia](evidencias/Pasted%20image%2020251018163907.png)
 ### Paso 5.3: Verificar que el contenedor está corriendo
 
 ```bash
@@ -393,7 +393,7 @@ docker ps
 CONTAINER ID   IMAGE                              COMMAND                  CREATED         STATUS         PORTS                NAMES
 [ID]           idkman068/nginx-2048:latest        "nginx -g 'daemon of…"   X seconds ago   Up X seconds   0.0.0.0:80->80/tcp   web-2048
 ```
-![Evidencia](evidencias/Pasted image 20251018164018.png)
+![Evidencia](evidencias/Pasted%20image%2020251018164018.png)
 ### Paso 5.4: Ver los logs del contenedor
 
 ```bash
@@ -404,7 +404,7 @@ docker logs web-2048
 ```
 [Logs de Nginx iniciando correctamente]
 ```
-![Evidencia](evidencias/Pasted image 20251018164253.png)
+![Evidencia](evidencias/Pasted%20image%2020251018164253.png)
 Resultado: Sin errores (output vacío o mínimo indica que Nginx está funcionando correctamente sin problemas)
 
 ---
@@ -423,7 +423,7 @@ Resultado: Sin errores (output vacío o mínimo indica que Nginx está funcionan
 ```
 [Captura de pantalla de los secrets configurados en GitHub]
 ```
-![Evidencia](evidencias/Pasted image 20251018165101.png)
+![Evidencia](evidencias/Pasted%20image%2020251018165101.png)
 
 ### Paso 6.2: Crear workflow de GitHub Actions
 
@@ -481,7 +481,7 @@ jobs:
 ```
 [Captura de pantalla del workflow file]
 ```
-![Evidencia](evidencias/Pasted image 20251018165344.png)
+![Evidencia](evidencias/Pasted%20image%2020251018165344.png)
 
 ### Paso 6.3: Commit y push al repositorio
 
@@ -497,7 +497,7 @@ git push origin main
 [Captura del log del workflow completado con estado: ✅ Success]
 Repositorio: https://github.com/edwinfang01/dockerizar-web-estatica
 ```
-![Evidencia](evidencias/Pasted image 20251018165603.png)
+![Evidencia](evidencias/Pasted%20image%2020251018165603.png)
 
 ---
 
@@ -514,7 +514,7 @@ Repositorio: https://github.com/edwinfang01/dockerizar-web-estatica
 ```
 [Captura de pantalla del juego funcionando localmente]
 ```
-![Evidencia](evidencias/Pasted image 20251018170319.png)
+![Evidencia](evidencias/Pasted%20image%2020251018170319.png)
 
 ### Verificación en Docker Hub
 
@@ -527,7 +527,7 @@ Repositorio: https://github.com/edwinfang01/dockerizar-web-estatica
 ```
 [Captura de pantalla de Docker Hub mostrando la imagen y tags]
 ```
-![Evidencia](evidencias/Pasted image 20251018171615.png)
+![Evidencia](evidencias/Pasted%20image%2020251018171615.png)
 
 ### Verificación en AWS
 
@@ -541,7 +541,7 @@ Repositorio: https://github.com/edwinfang01/dockerizar-web-estatica
 [Captura de pantalla accediendo desde el navegador a http://54.163.19.229]
 [Captura mostrando la URL con la IP pública en la barra de direcciones]
 ```
-![Evidencia](evidencias/Pasted image 20251018171741.png)
+![Evidencia](evidencias/Pasted%20image%2020251018171741.png)
 
 ### Pruebas de funcionalidad
 
